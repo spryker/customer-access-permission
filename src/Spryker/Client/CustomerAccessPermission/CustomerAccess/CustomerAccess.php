@@ -25,10 +25,6 @@ class CustomerAccess implements CustomerAccessInterface
      */
     protected $customerAccessConfig;
 
-    /**
-     * @param \Spryker\Client\CustomerAccessPermission\Dependency\Client\CustomerAccessPermissionToCustomerAccessStorageClientInterface $customerAccessStorageReader
-     * @param \Spryker\Client\CustomerAccessPermission\CustomerAccessPermissionConfig $customerAccessConfig
-     */
     public function __construct(
         CustomerAccessPermissionToCustomerAccessStorageClientInterface $customerAccessStorageReader,
         CustomerAccessPermissionConfig $customerAccessConfig
@@ -37,9 +33,6 @@ class CustomerAccess implements CustomerAccessInterface
         $this->customerAccessConfig = $customerAccessConfig;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\PermissionCollectionTransfer
-     */
     public function getLoggedInCustomerPermissions(): PermissionCollectionTransfer
     {
         $authenticatedCustomerAccess = $this->customerAccessStorageReader->getAuthenticatedCustomerAccess();
@@ -47,9 +40,6 @@ class CustomerAccess implements CustomerAccessInterface
         return $this->getPermissionsFromCustomerAccess($authenticatedCustomerAccess);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\PermissionCollectionTransfer
-     */
     public function getLoggedOutCustomerPermissions(): PermissionCollectionTransfer
     {
         $unauthenticatedCustomerAccess = $this->customerAccessStorageReader->getUnauthenticatedCustomerAccess();
@@ -80,9 +70,6 @@ class CustomerAccess implements CustomerAccessInterface
         return $permissionCollectionTransfer;
     }
 
-    /**
-     * @return string
-     */
     public function getCustomerSecuredPatternForUnauthenticatedCustomerAccess(): string
     {
         $customerSecuredPattern = $this->customerAccessConfig->getCustomerSecuredPattern();
@@ -92,12 +79,6 @@ class CustomerAccess implements CustomerAccessInterface
         return $customerSecuredPattern;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
-     * @param string $customerSecuredPattern
-     *
-     * @return string
-     */
     public function applyCustomerAccessOnCustomerSecuredPattern(
         CustomerAccessTransfer $customerAccessTransfer,
         string $customerSecuredPattern

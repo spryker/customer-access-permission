@@ -21,9 +21,6 @@ class SeeOrderPlaceSubmitPermissionPlugin extends AbstractPlugin implements Perm
      */
     public const KEY = 'SeeOrderPlaceSubmitPermissionPlugin';
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return static::KEY;

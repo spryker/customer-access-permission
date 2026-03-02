@@ -18,25 +18,16 @@ use Spryker\Client\Kernel\AbstractFactory;
  */
 class CustomerAccessPermissionFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\CustomerAccessPermission\CustomerAccess\CustomerAccessInterface
-     */
     public function createCustomerAccess(): CustomerAccessInterface
     {
         return new CustomerAccess($this->getCustomerAccessStorageClient(), $this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Client\CustomerAccessPermission\Dependency\Client\CustomerAccessPermissionToCustomerClientInterface
-     */
     public function getCustomerClient(): CustomerAccessPermissionToCustomerClientInterface
     {
         return $this->getProvidedDependency(CustomerAccessPermissionDependencyProvider::CLIENT_CUSTOMER);
     }
 
-    /**
-     * @return \Spryker\Client\CustomerAccessPermission\Dependency\Client\CustomerAccessPermissionToCustomerAccessStorageClientInterface
-     */
     public function getCustomerAccessStorageClient(): CustomerAccessPermissionToCustomerAccessStorageClientInterface
     {
         return $this->getProvidedDependency(CustomerAccessPermissionDependencyProvider::CLIENT_CUSTOMER_ACCESS_STORAGE);

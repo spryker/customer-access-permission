@@ -21,9 +21,6 @@ class SeeShoppingListPermissionPlugin extends AbstractPlugin implements Permissi
      */
     public const KEY = 'SeeShoppingListPermissionPlugin';
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return static::KEY;

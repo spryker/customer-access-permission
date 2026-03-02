@@ -12,27 +12,12 @@ use Generated\Shared\Transfer\PermissionCollectionTransfer;
 
 interface CustomerAccessInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\PermissionCollectionTransfer
-     */
     public function getLoggedInCustomerPermissions(): PermissionCollectionTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\PermissionCollectionTransfer
-     */
     public function getLoggedOutCustomerPermissions(): PermissionCollectionTransfer;
 
-    /**
-     * @return string
-     */
     public function getCustomerSecuredPatternForUnauthenticatedCustomerAccess(): string;
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
-     * @param string $customerSecuredPattern
-     *
-     * @return string
-     */
     public function applyCustomerAccessOnCustomerSecuredPattern(
         CustomerAccessTransfer $customerAccessTransfer,
         string $customerSecuredPattern

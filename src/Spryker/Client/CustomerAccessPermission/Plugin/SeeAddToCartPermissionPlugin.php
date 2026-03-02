@@ -21,9 +21,6 @@ class SeeAddToCartPermissionPlugin extends AbstractPlugin implements PermissionP
      */
     public const KEY = 'SeeAddToCartPermissionPlugin';
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return static::KEY;

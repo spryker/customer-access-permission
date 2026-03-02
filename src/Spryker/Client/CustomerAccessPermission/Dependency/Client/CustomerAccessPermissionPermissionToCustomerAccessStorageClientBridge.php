@@ -24,17 +24,11 @@ class CustomerAccessPermissionPermissionToCustomerAccessStorageClientBridge impl
         $this->customerAccessStorageClient = $customerAccessStorageClient;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getUnauthenticatedCustomerAccess(): CustomerAccessTransfer
     {
         return $this->customerAccessStorageClient->getUnauthenticatedCustomerAccess();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getAuthenticatedCustomerAccess(): CustomerAccessTransfer
     {
         return $this->customerAccessStorageClient->getAuthenticatedCustomerAccess();

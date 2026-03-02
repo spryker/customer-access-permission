@@ -21,9 +21,6 @@ class SeeWishlistPermissionPlugin extends AbstractPlugin implements PermissionPl
      */
     public const KEY = 'SeeWishlistPermissionPlugin';
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return static::KEY;

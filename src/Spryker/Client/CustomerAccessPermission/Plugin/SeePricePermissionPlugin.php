@@ -21,9 +21,6 @@ class SeePricePermissionPlugin extends AbstractPlugin implements PermissionPlugi
      */
     public const KEY = 'SeePricePermissionPlugin';
 
-    /**
-     * @return string
-     */
     public function getKey(): string
     {
         return static::KEY;
