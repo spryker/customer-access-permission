@@ -18,6 +18,8 @@ use Spryker\Client\Kernel\AbstractBundleConfig;
 class CustomerAccessPermissionConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\CustomerAccess\CustomerAccessConfig::CONTENT_TYPE_PRICE
      *
      * @var string
@@ -25,6 +27,8 @@ class CustomerAccessPermissionConfig extends AbstractBundleConfig
     public const CONTENT_TYPE_PRICE = 'price';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\CustomerAccess\CustomerAccessConfig::CONTENT_TYPE_ORDER_PLACE_SUBMIT
      *
      * @var string
@@ -32,6 +36,8 @@ class CustomerAccessPermissionConfig extends AbstractBundleConfig
     public const CONTENT_TYPE_ORDER_PLACE_SUBMIT = 'order-place-submit';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\CustomerAccess\CustomerAccessConfig::CONTENT_TYPE_ADD_TO_CART
      *
      * @var string
@@ -39,6 +45,8 @@ class CustomerAccessPermissionConfig extends AbstractBundleConfig
     public const CONTENT_TYPE_ADD_TO_CART = 'add-to-cart';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\CustomerAccess\CustomerAccessConfig::CONTENT_TYPE_WISHLIST
      *
      * @var string
@@ -46,6 +54,8 @@ class CustomerAccessPermissionConfig extends AbstractBundleConfig
     public const CONTENT_TYPE_WISHLIST = 'wishlist';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\CustomerAccess\CustomerAccessConfig::CONTENT_TYPE_SHOPPING_LIST
      *
      * @var string
